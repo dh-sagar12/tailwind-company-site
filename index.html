@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind learn</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <script src="/node_modules/@splidejs/splide/dist/js/splide.min.jsS"></script>
+
+
+
+
+
+</head>
+
+<body>
+    <header class="bg-[url('/static/curvebg.png')] bg-cover ">
+        <nav class=" fixed z-[100] transition duration-500 " id="navbar">
+            <div class="flex px-3 justify-between md:justify-around items-center w-screen md:x-3">
+                <div class=" cursor-pointer">
+                    <a href="/">
+                        <img src="/static/logo.png" class="max-w-[150px] md:max-w-[200px] lg:max-w-[250px]" alt="Logo">
+                    </a>
+                </div>
+                <!-- navigation for computer  -->
+                <div class="hidden md:block">
+                    <ul class="flex md:space-x-7 md:mr-4 " id="navigations">
+                        <li class=" text-white text-xl md:hover:text-orange-500">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class=" text-white   text-xl md:hover:text-orange-500 ">
+                            <a href="#about">About</a>
+                        </li>
+                        <li class=" text-white   text-xl md:hover:text-orange-500">
+                            <a href="#productServices">Product & Services</a>
+                        </li>
+                        <li class=" text-white  text-xl md:hover:text-orange-500">
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- hamburger menu  -->
+                <button class="space-y-1  md:hidden" id="hamBurger">
+                    <div class=" bg-slate-200  h-0.5 w-7 rounded-xl sm:w-8 "></div>
+                    <div class=" bg-slate-200 h-0.5 w-5 rounded-xl sm:w-6 "></div>
+                    <div class=" bg-slate-200 h-0.5 w-3 rounded-xl sm:w-4 "></div>
+                </button>
+            </div>
+        </nav>
+        <section class="py-14 flex flex-col justify-center md:pt-28  md:flex-row md:items-center lg:pb-20" id="home">
+            <div class="px-10 pt-14 text-center md:pt-0 lg:w-1/2 sm:w-2/3 sm:m-auto">
+                <h1 class="text-lg font-bold text-white sm:text-3xl lg:text-4xl ">We Make Banking Channels Easier
+                    For You</h1>
+                <button
+                    class="px-1 py-1 text-xs sm:text-sm sm:px-2 sm:py-2 bg-orange-500 text-white font-bold font-sans my-2 rounded-3xl md:px-4 md:py-4 md:text-md2 ">KNOW
+                    MORE</button>
+            </div>
+            <div
+                class="h-3/4 w-3/4 mx-auto py-10 flex justify-center sm:h-2/3 sm:w-2/4 sm:mx-[9.5rem]  md:mx-7 md:pb-10 md:pt-0 md:h-2/4 md:w-2/4 lg:h-1/3 lg:w-1/3 lg:pb-20">
+                <img src="/static/headerBanner.png" alt="Image showing how company Works" class="md:pb-20">
+            </div>
+        </section>
+    </header>
+
+    <!-- content for mobile navigation  -->
+
+    <div class="fixed top-full h-3/4 z-[200]  bg-cyan-500 w-full py-5 text-center duration-500 transition-all"
+        id="secMenu">
+        <div class="flex justify-end px-4">
+            <span id="closeBtn" class="text-xl text-white font-bold">&#10005;</span>
+        </div>
+        <ul class="py-10 space-y-10 duration-12 ">
+            <li class="font-bold text-white font-mono text-xl">
+                <a href="/">Home</a>
+            </li>
+            <li class="font-bold text-white  font-mono text-xl">
+                <a href="#about" onclick="toogleOffNav()">About</a>
+            </li>
+            <li class="font-bold text-white  font-mono text-xl">
+                <a href="#productServices" onclick="toogleOffNav()">Product & Services</a>
+            </li>
+            <li class="font-bold text-white  font-mono text-xl">
+                <a href="#contact" onclick="toogleOffNav()">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- about our company  -->
+    <section class="bg-stone-50 lg:px-6 md:grid md:grid-cols-2 lg:justify-center lg:items-center" id="about">
+        <div class="p-10 sm:p-14  md:p-10 lg:px-32">
+            <img src="/static/aboutus.png" class=" w-5/6 m-auto sm:w-1/2 sm:mx-auto md:w-full" alt="about">
+        </div>
+        <div class="p-3">
+            <h1 class="my-1 mx-1  font-bold text-2xl sm:text-3xl 2xl:text-5xl ">About Our Company</h1>
+            <div>
+                <p class="py-2 text-slate-800 font-sans text-lg font-medium sm:text-lg md:text-sm 2xl:text-lg">
+                    Premium® Technologies Pvt. Ltd. (Tinkune, Kathmandu) is specialized team for customized software
+                    development. With more than 8 years of experience in other well established companies of Nepal, our
+                    team shortly as “Premium Tech” was established with the primary mission to develop software for the
+                    institutions like Co-operative Societies, Microfinances, Small to medium sized businesses etc.
+                </p>
+                <h6 class="text-xl font-extrabold sm:text-xl">We are you!!!</h6>
+                <p
+                    class="py-2 indent-16 text-slate-800 font-sans text-lg font-medium sm:text-lg md:text-sm 2xl:text-lg">
+                    About a decade experience of our team in financial software developing sector we have learnt that
+                    our customer’s feedbacks are our greatest assets which mean that because of our customer’s feedback
+                    and suggestion we have made so far and we know we will go further. Our product totally reflects you
+                    because we value your feedbacks and suggestion as our greatest assets and believe as lifeblood of
+                    our business.
+                </p>
+                <p
+                    class="py-1 font-extrabold px-1 border-l-4 text-lg sm:text-2xl sm:py-4 sm:my-4 border-red-500 lg:w-3/4 2xl:text-4xl">
+                    “ Forget your competitors, satisfy your customer ”
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- crousel section for product and features -->
+    <section class=" bg-cyan-500 p-5" id="productServices">
+        <div class="splide  mx-4">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide z-0">
+                        <div class="flex flex-col items-center justify-center p-4 bg-white rounded-xl">
+                            <div class=" w-1/2 h-1/2">
+                                <img src="/static/pcbs.png" class="" alt="">
+
+                            </div>
+                            <h3 class="text-2xl text-blue-600 my-3 font-bold">Premium CBS</h3>
+                            <p class="text-center text-slate-400 ">Core Banking System for small and medium financial
+                                institutions and credit unions.</p>
+                            <button class="px-3 py-2 bg-orange-500 text-white font-bold font-sans my-2 rounded-3xl">KNOW
+                                MORE</button>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="flex flex-col items-center justify-center p-4 bg-white rounded-xl">
+                            <div class="w-1/2 h-1/2">
+                                <img src="/static/mobankiing.png" alt="">
+                            </div>
+                            <h3 class="text-2xl text-blue-600 my-3 font-bold">Premium CBS</h3>
+                            <p class="text-center text-slate-400 ">Core Banking System for small and medium financial
+                                institutions and credit unions.</p>
+                            <button class="px-3 py-2 bg-orange-500 text-white font-bold font-sans my-2 rounded-3xl">KNOW
+                                MORE</button>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="flex flex-col items-center justify-center p-4 bg-white rounded-xl">
+                            <div class=" w-1/2 h-1/2">
+                                <img src="/static/atm.png" alt="">
+                            </div>
+                            <h3 class="text-2xl text-blue-600 my-3 font-bold">Premium CBS</h3>
+                            <p class="text-center text-slate-400 ">Core Banking System for small and medium financial
+                                institutions and credit unions.</p>
+                            <button class="px-3 py-2 bg-orange-500 text-white font-bold font-sans my-2 rounded-3xl">KNOW
+                                MORE</button>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="flex flex-col items-center justify-center p-4 bg-white rounded-xl">
+                            <div class=" w-1/2 h-1/2">
+                                <img src="/static/smsbank.png" alt="">
+                            </div>
+                            <h3 class="text-2xl text-blue-600 my-3 font-bold">Premium CBS</h3>
+                            <p class="text-center text-slate-400 ">Core Banking System for small and medium financial
+                                institutions and credit unions.</p>
+                            <button class="px-3 py-2 bg-orange-500 text-white font-bold font-sans my-2 rounded-3xl">KNOW
+                                MORE</button>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="flex flex-col items-center justify-center p-4 bg-white rounded-xl">
+                            <div class="w-1/2 h-1/2">
+                                <img src="/static/cloudservice.png" alt="">
+                            </div>
+                            <h3 class="text-2xl text-blue-600 my-3 font-bold">Premium CBS</h3>
+                            <p class="text-center text-slate-400 ">Core Banking System for small and medium financial
+                                institutions and credit unions.</p>
+                            <button class="px-3 py-2 bg-orange-500 text-white font-bold font-sans my-2 rounded-3xl">KNOW
+                                MORE</button>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="flex flex-col items-center justify-center p-4 bg-white rounded-xl">
+                            <div class=" w-1/2 h-1/2">
+                                <img src="/static/tabbank.png" class="" alt="">
+                            </div>
+                            <h3 class="text-2xl text-blue-600 my-3 font-bold">Premium CBS</h3>
+                            <p class="text-center text-slate-400 ">Core Banking System for small and medium financial
+                                institutions and credit unions.</p>
+                            <button class="px-3 py-2 bg-orange-500 text-white font-bold font-sans my-2 rounded-3xl">KNOW
+                                MORE</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <hr class=" bg-black ">
+    <!-- contact us section  -->
+    <section class="bg-gradient-to-br from-cyan-600  to-cyan-300  ">
+        <div class="grid lg:grid-cols-2 lg:px-4 lg:py-4">
+            <div id="mapsection " class=" ">
+                <iframe
+                    src="https://maps.google.com/maps?q=Premium%20Technologies%20Pvt%20Ltd&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                    class=" w-full h-[500px]" frameborder="0" style="border:0" allowfullscreen>
+                </iframe>
+            </div>
+            <div id="contact" class="flex flex-col place-content-center from-cyan-600 to-cyan-200 p-3 my-10">
+                <div
+                    class="text-center md:w-3/ text-lg md:m-auto sm:w-3/4 sm:m-auto sm:text-xl md:text-2xl lg:w-2/3 lg:mx-auto">
+                    <input type="text"
+                        class=" p-3 my-2 bg-cyan-600  w-full border rounded-md  border-slate-200 focus:outline-none text-white font-[Ubuntu] text-md"
+                        name="name" id="fullName" placeholder="Full Name" required>
+                    <input type="email" name="email"
+                        class="bg-cyan-600 border  w-full rounded-md border-slate-200 p-3 my-2 focus:outline-none text-white font-[Ubuntu] "
+                        id="email" placeholder="Email Address" required>
+                    <textarea name="message" id="message"
+                        class="bg-cyan-600 border rounded-md w-full  border-slate-200 p-3 my-2 focus:outline-none text-white font-[Ubuntu]  "
+                        rows="7" placeholder="Message"></textarea>
+                    <button type="submit"
+                        class="px-3 py-2 bg-orange-500 w-1/2 m-auto text-white font-bold font-sans my-2 rounded-xl focus:bg-orange-400">SEND</button>
+                </div>
+            </div>
+        </div>
+        <div
+            class="flex bg-slate-800 text-white py-10 flex-col items-center justify-center sm:flex-row sm:justify-between sm:px-8 ">
+            <div class=" flex flex-col justify-center items-center">
+                <h2 class="text-2xl sm:text-3xl text-center my-4 text-orange-600 font-bold ">Contact Info
+                </h2>
+                <ul class="text-center sm:text-lg ">
+                    <li> <i class="fas fa-phone fa-sm mx-2 "></i>+977 1 4104404, 9801130700</li>
+                    <li> <i class="fas fa-envelope fa-sm mx-2 "></i>info@premiumtech.com.np</li>
+                </ul>
+            </div>
+            <div class=" flex  flex-col justify-center items-center">
+                <h2 class="text-2xl sm:text-3xl text-center my-4 text-orange-600 font-bold">Address Info
+                </h2>
+                <ul class="text-center sm:text-lg ">
+                    <li> <i class="fas fa-home fa-sm mx-2"></i>Subhidanagar, 32, Tinkune, Kathmandu</li>
+                    <br>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- footer section started from here  -->
+    <footer class="bg-slate-700 text-white flex flex-col justify-center items-center py-2">
+        <p class="text-sm text-orange-400 text-center sm:text-lg ">
+            Copyright © 2020 Premium Technologies Pvt. Ltd.
+        </p>
+        <div class="flex space-x-3 my-3 text-orange-600">
+            <i class="fab fa-facebook-f  sm:text-xl md:text-2xl"></i>
+            <i class="fab fa-twitter sm:text-xl md:text-2xl"></i>
+            <i class="fab fa-linkedin sm:text-xl md:text-2xl"></i>
+            <i class="fab fa-instagram sm:text-xl md:text-2xl "></i>
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // var splide = new Splide('.splide');
+            // splide.mount();
+
+            var splide = new Splide('.splide', {
+                rewind: true,
+                perPage: 1,
+                trimSpace: true,
+                gap: 35,
+                breakpoints: {
+                    640: {
+                        perPage: 1,
+                    },
+                    1000: {
+                        perPage: 2,
+
+                    },
+                    1700: {
+                        perPage: 3,
+                    },
+                    2300: {
+                        perPage: 4,
+                    }
+
+                }
+            });
+            splide.mount()
+        });
+
+    </script>
+    <script src="/js/script.js" type="module"></script>
+    <script>
+
+        function toogleOffNav() {
+            secMenu.style.top = '100vh';
+        }
+    </script>
+
+</body>
+
+
+</html>
